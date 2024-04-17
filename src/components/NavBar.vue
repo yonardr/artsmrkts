@@ -1,6 +1,9 @@
 <template>
 
   <div class="navbar">
+    <div class="_container">
+
+
     <router-link class="link logo" to="/"><img src="../assets/navbar/image18.png" /></router-link>
 
     <div class="navbar__links">
@@ -16,6 +19,11 @@
     </div>
     <button class="btn blue">Register</button>
     <button class="btn orange">Demo Account</button>
+      <div class="verticalLine">
+        <router-link class="link blue" to="/">Login</router-link>
+      </div>
+
+    </div>
   </div>
 
 
@@ -31,10 +39,15 @@ export default {
 <style lang="scss" scoped>
 .navbar{
   display: flex;
-  align-items: center;
   font-weight: bold;
   font-size: 20px;
+  width: 100%;
   height: 110px;
+}
+._container{
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 .logo{
   width: 293px;
@@ -47,13 +60,13 @@ export default {
   width: 470px;
   display: flex;
   justify-content: space-between;
-  .link{
-    color: #000;
-    text-decoration: none;
-  }
-  .blue{
-    color: #0165FF;
-  }
+}
+.link{
+  color: #000;
+  text-decoration: none;
+}
+.blue{
+  color: #0165FF;
 }
 .country{
   margin-left: 173px;
@@ -83,8 +96,22 @@ export default {
     background-color: #0165FF;
   }
   &.orange{
+    white-space: nowrap;
     background-color: #F05B22;
     margin-left: 20px;
+  }
+}
+.verticalLine {
+  border-left: 1px solid #C7C7C7;
+  padding: 20px 40px;
+  margin-left: 40px;
+}
+@media (max-width: 1600px) {
+  .navbar__links{
+    display: none;
+  }
+  ._container{
+    justify-content: space-between;
   }
 }
 </style>
