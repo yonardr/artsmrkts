@@ -3,42 +3,46 @@
     <div
         :style="{background: `linear-gradient(to right, rgb(64, 76, 115, .94) 0%, rgb(24, 39, 81, .71) 100%), url(${imagePath}) center no-repeat`, backgroundSize: '100% 100%' }"
         class="main">
-      <div class="text">
-        <div class="title">
-          Trade with a broker Who
-          is Fair and Reputable
+      <div class="_container">
+        <div class="text">
+          <div class="title">
+            Trade with a broker Who
+            is Fair and Reputable
+          </div>
+          <div class="description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s.
+          </div>
         </div>
-        <div class="description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s.
-        </div>
-      </div>
-      <div class="card">
-        <div class="title">
-          Open New Account
-        </div>
-        <form @submit.prevent="send()">
-          <input placeholder="Enter e-mail" required v-model="form.email.value" type="email"  />
-          <input placeholder="Enter your full name" required v-model="form.fullName.value" type="text"/>
-          <button class="btn" :class="activeBtn">Register</button>
-        </form>
+        <div class="card">
+          <div class="title">
+            Open New Account
+          </div>
+          <form @submit.prevent="send()">
+            <input placeholder="Enter e-mail" required v-model="form.email.value" type="email"  />
+            <input placeholder="Enter your full name" required v-model="form.fullName.value" type="text"/>
+            <button class="btn" :class="activeBtn">Register</button>
+          </form>
           <div class="horizontalLines">
             <div class="item"></div>
             <div class="description">Or register via</div>
             <div class="item"></div>
           </div>
 
-        <div class="socialLinks">
-          <img src="../assets/main/image%2015.png"/>
-          <img src="../assets/main/image%2016.png"/>
-          <img src="../assets/main/image%2017.png"/>
-        </div>
+          <div class="socialLinks">
+            <img src="../assets/main/image%2015.png"/>
+            <img src="../assets/main/image%2016.png"/>
+            <img src="../assets/main/image%2017.png"/>
+          </div>
 
-        <div class="footer">
-          <div>Already have an account? <a>Log In</a></div>
-          <div>By registreting you agree to our <b>privacy policy</b></div>
+          <div class="footer">
+            <div>Already have an account? <a>Log In</a></div>
+            <div>By registreting you agree to our <b>privacy policy</b></div>
+          </div>
         </div>
       </div>
+
+
     </div>
   </div>
 </template>
@@ -86,7 +90,13 @@ export default {
   align-items: center;
   justify-content: space-evenly;
 }
-
+._container{
+  max-width: 1659px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 .text {
   display: flex;
   flex-direction: column;
